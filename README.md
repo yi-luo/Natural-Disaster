@@ -10,6 +10,15 @@
 * EM-DAT: The Emergency Events Database - Universite catholique de Louvain (UCL) - CRED, D. Guha-Sapir - www.emdat.be, Brussels, Belgium
 * Center for International Earth Science Information Network - CIESIN - Columbia University. 2018. Gridded Population of the World, Version 4 (GPWv4): Administrative Unit Center Points with Population Estimates, Revision 11. Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC). https://doi.org/10.7927/H4BC3WMT. Accessed June 9, 2019
 
+**Feature Selection**
+* Magnitude
+* Depth
+* Location (latitude and longitude)
+* Population Data 
+* Country: Human Development Index 
+* Date and Time
+
+
 ## Natural Disaster: Preparing Earthquake Data
 
 **Objective:** Analyze and merge earthquake datasets to gain a complete understanding of the factors affecting the severity and impact of earthquakes. 
@@ -34,9 +43,4 @@
 4. **Finding Outliers**
     * While I was able to merge 95% of the EM-DAT data based on methods described above, I need to make sure that the two data sources are aligned. 
     
-
-#### Features Selection:
-* Magnitude
-* Depth
-* Location (latitude and longitude)
 
