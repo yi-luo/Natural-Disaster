@@ -1,0 +1,39 @@
+---
+title: "earthquakes linear modelling"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+## Reading in the dataset
+data = read.csv("Datasets/earthquake_data.csv")
+attach(data)
+head(data)
+```
+```{r}
+
+```
+model <- lm(Total.deaths ~ depth+mag+Total.affected+X2017)
+
+```{r}
+
+model <- lm(log(0.00001+Total.deaths) ~ depth+mag+log(0.00001+Total.affected)+X2017)
+summary(model)
+anova(model)
+```
+```{r}
+residuals <- model$residuals
+hist(residuals, breaks=30)
+```
+```{r}
+normal <- rstandard(model)
+fitted_values <- model$fitted.values
+ln_fitted <- (fitted_values)
+plot(ln_fitted,normal)
+abline(h=0)
+```
+
